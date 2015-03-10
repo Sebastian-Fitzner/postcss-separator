@@ -128,7 +128,7 @@ Remove or separate into another file any data in your `css`.
 The second argument is optional. The `options` is same as the second argument of
 PostCSS's `process()` method. 
 
-### postcss (WIP)
+### postcss (WIP, not yet tested)
 
 Returns PostCSS processor.
 
@@ -156,7 +156,7 @@ This package also installs a Grunt plugin. You can enable this plugin in the
 
 ### Example Config
 
-To separate all `dataURIs` from `src/css/styles.css` to `build/css/icons.css` and clean up the origin file, use the following configuration:
+To separate all `dataURIs` from `source.css` to `tmp/icons.css` and clean up the origin file, use the following configuration:
 
 ``` js
 separator: {

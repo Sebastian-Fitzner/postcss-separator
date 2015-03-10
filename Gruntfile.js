@@ -10,7 +10,7 @@ module.exports = function (grunt) {
 			tests: ['tmp']
 		},
 
-		"separator": {
+		separator: {
 			options: {
 				keepOrigin: true,
 				dataFile: true
