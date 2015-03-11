@@ -1,6 +1,6 @@
 {
 	"name": "postcss-separator",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Split up your Data-URI (or anything else) into a separate CSS file.",
 	"main": "index.js",
 	"scripts": {
