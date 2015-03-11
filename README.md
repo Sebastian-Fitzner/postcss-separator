@@ -21,10 +21,10 @@ var separator = require('postcss-separator');
 
 var original = fs.readFileSync('source.css', 'utf8');
 
-var icons = separator.packIt(original, {
+var icons = separator.separate(original, {
 	dataFile: true
 });
-var cleanUp = separator.packIt(original, {
+var cleanUp = separator.separate(original, {
 	dataFile: false
 });
 
@@ -121,14 +121,14 @@ A boolean value that is used to include/exclude the rules parent node (eg. in @m
 
 ## Api
 
-### packIt(css, [options])
+### separate(css, [options])
 
 Remove or separate into another file any data in your `css`.
 
 The second argument is optional. The `options` is same as the second argument of
 PostCSS's `process()` method. 
 
-### postcss (WIP, not yet tested)
+### postcss()
 
 Returns PostCSS processor.
 
@@ -144,7 +144,7 @@ postcss().use(
   autoprefixer.postcss
 ).use(
   separator.postcss
-).process(css);
+).process(css, options);
 ```
 
 ## Grunt Plugin
