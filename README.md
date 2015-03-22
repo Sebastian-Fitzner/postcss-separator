@@ -149,50 +149,7 @@ postcss().use(
 
 ## Grunt Plugin
 
-This package also installs a Grunt plugin. You can enable this plugin in the
-`Gruntfile.js` of your project like that:
-
-    grunt.loadNpmTasks('postcss-separator');
-
-### Example Config
-
-To separate all `dataURIs` from `source.css` to `tmp/icons.css` and clean up the origin file, use the following configuration:
-
-``` js
-separator: {
-	options: {
-		keepOrigin: false, // overwrites source file
-		dataFile: true // generate a new file with your pattern
-	},
-	icons: {
-		options: {
-			pattern: {
-				matchValue: /data:/, // The RegExp to match values with
-				matchParent: true // Rules (eg. in @media blocks) include their parent node.
-			}
-		},
-		files: {
-			'tmp/icons.css': ['source.css']
-		}
-	},
-    image2x: {
-        options: {
-            pattern: {
-                matchValue: false, // The RegExp to match values with
-                matchRule: false, // The RegExp to match values with
-                matchMedia: /((min|max)-)?resolution\:\s*(\d+)?\.?(\d+)?dppx/, // The RegExp to match media queries with
-                matchParent: false // Rules (eg. in @media blocks) include their parent node.
-            }
-        },
-        files: {
-            'tmp/image.css': ['source.css']
-        }
-    }
-}
-
-```
-
-For more examples see [Gruntfile.js](Gruntfile.js).
+There is also a grunt module available: see [grunt-postcss-separator](https://github.com/Sebastian-Fitzner/grunt-postcss-separator)
 
 ## License
 Copyright (c) 2015 Sebastian Fitzner. Licensed under the MIT license.
