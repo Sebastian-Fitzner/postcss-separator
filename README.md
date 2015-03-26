@@ -63,7 +63,7 @@ a img {
 }
 ```
 
-You will get the following output:
+You will get the following output in `data.css`:
 
 ```css
 a.top:hover, a.top:focus {
@@ -78,45 +78,51 @@ a.top {
 
 #### keepOrigin (only available in Grunt)
 Type: `boolean`
-Default value: false
+Default value: `false`
 
-Keep the origin file untouched when defined as `true`. When defined as `false` the origin css file will be cleaned up.
+`true`: keep the origin file untouched.
+`false`: the origin CSS file will be cleaned up.
 
 #### dataFile
 Type: `boolean`
-Default value: true
+Default value: `true`
 
-The generated css content of your file matches your pattern when defined as `true`. When defined as `false` the matching pattern will be removed from your css file. 
+`true`: the generated CSS content of your file matches your pattern.
+`false`: the matching pattern will be removed from your CSS file. 
 
 #### pattern.matchValue
 Type: `RegExp`
-Default value: /data:/
+Default value: `/data:/`
 
-A string value that is used to set the value your are searching for in your css.
+A string value that is used to set the value like your are searching for in your CSS.
+Example: `background-image`
 
 #### pattern.matchProp
 Type: `RegExp`
-Default value: false
+Default value: `false`
 
-A string value that is used to set the property your are searching for in your css.
+A string value that is used to set the property your are searching for in your CSS.
+Example: `linear-gradient`
 
 #### pattern.matchRule
 Type: `RegExp`
-Default value: false
+Default value: `false`
 
-A string value that is used to set the rule your are searching for in your css.
+A string value that is used to set the rule your are searching for in your CSS.
+Example: `/lt-ie9/`
 
 #### pattern.matchMedia
 Type: `RegExp`
-Default value: false
+Default value: `false`
 
-A value that is used to set the media query your are searching for in your css.
+A value that is used to set the media query your are searching for in your CSS.
+Example: `resolution: 2dppx`
 
 #### pattern.matchParent
 Type: `Boolean`
-Default value: true
+Default value: `true`
 
-A boolean value that is used to include/exclude the rules parent node (eg. in @media blocks).
+A boolean value that is used to include/exclude the rules parent node (eg. in `@media` blocks).
 
 
 ## Api
@@ -125,8 +131,7 @@ A boolean value that is used to include/exclude the rules parent node (eg. in @m
 
 Remove or separate into another file any data in your `css`.
 
-The second argument is optional. The `options` is same as the second argument of
-PostCSS's `process()` method. 
+`options` (optional) same as the second argument of PostCSS' `process()` method. 
 
 ### postcss()
 
@@ -157,4 +162,4 @@ Copyright (c) 2015 Sebastian Fitzner. Licensed under the MIT license.
 ## ToDos
 
 - Add tests
-- Add further plugin compatibility for postcss
+- Add further plugin compatibility for PostCSS
