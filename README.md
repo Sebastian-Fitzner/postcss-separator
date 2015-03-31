@@ -77,49 +77,69 @@ a.top {
 ## Options
 
 #### keepOrigin (only available in Grunt)
+
 Type: `boolean`
+
 Default value: `false`
 
 `true`: keep the origin file untouched.
+
 `false`: the origin CSS file will be cleaned up.
 
 #### dataFile
+
 Type: `boolean`
+
 Default value: `true`
 
 `true`: the generated CSS content of your file matches your pattern.
+
 `false`: the matching pattern will be removed from your CSS file. 
 
 #### pattern.matchValue
+
 Type: `RegExp`
+
 Default value: `/data:/`
 
 A string value that is used to set the value like your are searching for in your CSS.
+
 Example: `background-image`
 
 #### pattern.matchProp
+
 Type: `RegExp`
+
 Default value: `false`
 
 A string value that is used to set the property your are searching for in your CSS.
+
 Example: `linear-gradient`
 
 #### pattern.matchRule
+
 Type: `RegExp`
+
 Default value: `false`
 
 A string value that is used to set the rule your are searching for in your CSS.
+
 Example: `/lt-ie9/`
 
 #### pattern.matchMedia
+
 Type: `RegExp`
+
 Default value: `false`
 
 A value that is used to set the media query your are searching for in your CSS.
+
 Example: `resolution: 2dppx`
 
 #### pattern.matchParent
+
 Type: `Boolean`
+
 Default value: `true`
 
 A boolean value that is used to include/exclude the rules parent node (eg. in `@media` blocks).
