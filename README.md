@@ -104,7 +104,7 @@ Default value: `/data:/`
 
 A string value that is used to set the value like your are searching for in your CSS.
 
-Example: `background-image`
+Example: `linear-gradient`
 
 #### pattern.matchProp
 
@@ -114,7 +114,7 @@ Default value: `false`
 
 A string value that is used to set the property your are searching for in your CSS.
 
-Example: `linear-gradient`
+Example: `background-image`
 
 #### pattern.matchRule
 
