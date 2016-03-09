@@ -15,11 +15,10 @@ Written with [PostCSS](https://github.com/postcss).
 Read `source.css`, process its content, and output processed CSS to `styles.css` and `data.css`.
 
 ``` js
-
 var fs = require('fs');
-var separator = require('postcss-separator');
+var separator = require('../index');
 
-var original = fs.readFileSync('source.css', 'utf8');
+var original = fs.readFileSync('./fixtures/source.css', 'utf8');
 
 var icons = separator.separate(original, {
 	dataFile: true
@@ -28,9 +27,8 @@ var cleanUp = separator.separate(original, {
 	dataFile: false
 });
 
-fs.writeFile('data.css', icons.css);
-fs.writeFile('styles.css', cleanUp.css);
-
+fs.writeFileSync('./expected/data.css', icons.css);
+fs.writeFileSync('./expected/styles.css', cleanUp.css);
 ```
 
 If `source.css` has:
@@ -143,6 +141,19 @@ Type: `Boolean`
 Default value: `true`
 
 A boolean value that is used to include/exclude the rules parent node (eg. in `@media` blocks).
+
+#### pattern.matchAtRuleType
+
+Type: `RegExp`
+
+Default value: `false`
+
+A value which is used for searching @-types in your CSS.
+
+Examples: 
+- `/print/`
+- `/font-face/`
+
 
 
 ## Api
